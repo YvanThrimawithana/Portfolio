@@ -1,5 +1,6 @@
 /*fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
 
 /*colors*/
 * {
@@ -32,28 +33,23 @@ html, body {
     opacity: 1;
   }
 }
-
-/* Apply animation to navbar */
 #main-doc #nav-bar {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between; /* Stretch content */
   position: fixed;
   top: 0;
-  left: 500px; /* Set left to 50% */
-  transform: translate(-50%, -50%);
-  width: 450px; /* Adjust width as needed */
-  max-width: 100%; /* Ensure it doesn't exceed the viewport width */
+  left: 0;
+  width: 100%; /* Stretch across entire page */
   height: 60px;
-  background-color: rgba(36, 45, 57, 0.5);
+  background-color: rgba(0, 0, 0, 0.1); /* Transparent background */
   color: white;
-  border-radius: 10px;
-  margin-top: 20px; /* Adjust margin as needed */
-  box-shadow: 0 0 1.5px 1px rgba(255, 255, 255, 0.4), 0 0 1.5px 1px rgba(255, 255, 255, 0.4) inset;
+  border: none; /* Remove border */
+  padding:2%;
   animation: ripple 0.5s ease-out forwards;
   z-index: 1000;
+  backdrop-filter: blur(10px); /* Add blur effect */
 }
-
 
 #main-doc {
   padding-top: 60px; /* Add padding to the top of the main content to prevent it from being hidden behind the navbar */
@@ -111,6 +107,7 @@ html, body {
   text-align: center;
   position: relative;
   overflow: hidden;
+  display: flex;
 }
 
 .section::before {
@@ -137,6 +134,7 @@ html, body {
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   margin: 5%;
+  display: flex;;
 }
 
 /* Neon blue and rustic orange accent colors */
@@ -147,8 +145,6 @@ html, body {
 .section p {
   color: #ff9f00; /* Rustic orange */
 }
-
-
 
 .profile_section {
   
@@ -163,27 +159,32 @@ html, body {
   align-items: center;
   padding-left:8%;
   padding-right:8%;
+  padding-top: 1%;
+  padding-bottom: 2%;
 
 }
 
 .description {
   flex: 1;
   text-align: left;
-  padding-right: 30%;
+  padding-right: 20%;
 }
 .description h1 {
   font-size: 2.8rem;
   color: #6effff;
   margin-bottom: 15px;
+  font-family: 'Arvo', serif;
 }
 
 .description p {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: #fff;
+  margin-bottom: 20px;
+  
 }
 
 .profile img {
-  width: 400px; /* Adjust image width */
+  width: 300px; /* Adjust image width */
   height: auto;
   border-radius: 50%;
 }
@@ -191,6 +192,61 @@ html, body {
 .glow {
   filter: drop-shadow(0 0 10px #6effff); /* Add glow effect */
 }
+
+.social-icon {
+  width: auto; /* Adjust the size as needed */
+  height: 30px; /* Adjust the size as needed */
+  
+}
+
+
+
+
+/* About Me styles */
+.about-me {
+  flex: 1;
+  padding-right: 20px;
+}
+
+/* Skills styles */
+.skills {
+  display: flex;
+  flex-direction: column;
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.progress-bar {
+  width: 200px;
+  height: 20px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  position: relative;
+  margin-left: 20%;
+  overflow: hidden; /* Ensure the progress bar doesn't overflow */
+  
+}
+
+.progress-bar .progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #4CAF50; /* Green color */
+  border-radius: 10px;
+}
+
+.skill p {
+  margin: 0;
+  padding-right: 10px;
+}
+
+
+
 
 
 

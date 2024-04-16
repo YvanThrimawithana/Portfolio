@@ -31,4 +31,21 @@ function typeWriter(element, text, i) {
     profileName.innerHTML = ""; // Clear the text content of the h1 tag
     typeWriter(profileName, text, 0);
   });
-    
+
+  document.addEventListener("DOMContentLoaded", function() {
+    // Get all progress bars
+    const progressBars = document.querySelectorAll(".progress-bar");
+  
+    // Loop through each progress bar
+    progressBars.forEach(function(progressBar) {
+      // Get the progress percentage from data-percent attribute
+      const percent = parseInt(progressBar.dataset.percent);
+  
+      // Get the progress element inside the progress bar
+      const progress = progressBar.querySelector(".progress");
+  
+      // Set the width of the progress element based on the percentage
+      progress.style.width = percent + "%";
+    });
+  });
+  
