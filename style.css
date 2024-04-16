@@ -1,99 +1,206 @@
-/* Resetting default margin and padding */
+/*fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/*colors*/
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  background-color: black;
+  font-family: 'Poppins', sans-serif;
+}
+
+#main-doc {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  position: absolute;
+}
+
+/* Add this animation keyframes */
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+    opacity: 0;
   }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Apply animation to navbar */
+#main-doc #nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 500px; /* Set left to 50% */
+  transform: translate(-50%, -50%);
+  width: 450px; /* Adjust width as needed */
+  max-width: 100%; /* Ensure it doesn't exceed the viewport width */
+  height: 60px;
+  background-color: rgba(36, 45, 57, 0.5);
+  color: white;
+  border-radius: 10px;
+  margin-top: 20px; /* Adjust margin as needed */
+  box-shadow: 0 0 1.5px 1px rgba(255, 255, 255, 0.4), 0 0 1.5px 1px rgba(255, 255, 255, 0.4) inset;
+  animation: ripple 0.5s ease-out forwards;
+  z-index: 1000;
+}
+
+
+#main-doc {
+  padding-top: 60px; /* Add padding to the top of the main content to prevent it from being hidden behind the navbar */
+}
+
+#main-doc a {
+  text-decoration: none;
+  color: white;
+  position: relative;
+  display: inline-block;
+}
+
+#main-doc .fa-github {
+  font-size: 32px; /* Adjust font size as needed */
+  margin-left: 10px; /* Adjust margin as needed */
+}
+
+#main-doc #nav-ul {
+  margin-left: 20px; /* Adjust margin as needed */
+}
+
+#main-doc #nav-ul li {
+  list-style-type: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem; /* Adjust font size as needed */
+  display: inline;
+  margin: 0 15px; /* Adjust margin as needed */
+}
+
+#main-doc #nav-ul a {
+  line-height: 60px; /* Adjust line height as needed */
+  border-radius: 10px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#main-doc #nav-ul a:hover {
+
+  color:#ec7322;
+  text-shadow:  5px #ffffff;/* Add glowing effect */
+  font-weight: 700;
   
-  /* Importing Poppins font from Google Fonts */
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+}
+
+
+
+#main-doc #nav-ul a:onclick {
+  background: black;
+  color: white;
+}
+
+/* Updated styles for sections */
+.section {
+  background-color: #242d39;
+  padding: 80px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.section::before {
+  content: '';
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: 50%;
+  left: 50%;
+  background-color: #1f2937;
+  border-radius: 50%;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+}
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  color: #fff;
+}
+
+/* Modern curved frame */
+.section {
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  margin: 5%;
+}
+
+/* Neon blue and rustic orange accent colors */
+.section h1, .section h2 {
+  color: #6effff; /* Neon blue */
+}
+
+.section p {
+  color: #ff9f00; /* Rustic orange */
+}
+
+
+
+.profile_section {
   
-  /* Styling the navbar */
-  .navbar {
-    background-color: #333;
-    position: fixed;
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-  }
-  .navbar ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    font-size: 20px;
-    font-family: 'Poppins', sans-serif; /* Apply Poppins font */
-  }
-  
-  .navbar li {
-    margin: 0 20px;
-    font-family: 'Poppins', sans-serif; /* Apply Poppins font */
-  }
-  
-  .navbar a {
-    color: white;
-    text-decoration: none;
-    font-family: 'Poppins', sans-serif; /* Apply Poppins font */
-  }
-  /* Styling the sections */
-  .section {
-    padding: 50px 0;
-    text-align: center;
-    font-family: 'Poppins', sans-serif;
-  }
-  
-  .section h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-  }
-  
-  .section p {
-    font-size: 1.2rem;
-  }
-  
-  /* Smooth scrolling */
-  html {
-    scroll-behavior: smooth;
-  }
-  
-  body {
-    background-color: #333;
-  }
-  /* About section */
-.about-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .about-left,
-  .about-middle,
-  .about-right {
-    flex: 1;
-    text-align: center;
-  }
-  
-  .about-left h3 {
-    margin-bottom: 10px;
-  }
-  
-  .about-middle img {
-    max-width: 100%;
-    height: auto;
-    max-height: 300px; /* Adjust height as needed */
-    margin: 0 auto; /* Center image horizontally */
-  }
-  
-  .social-links {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .social-links li {
-    display: inline;
-    margin-right: 10px;
-  }
-  
-  .social-links li a {
-    color: white;
-  }
-  
+}
+.profile_content {
+
+  color: #fff;
+}
+.profile-container {
+  display: flex;
+  justify-content: space-between; /* Spread items evenly across the container */
+  align-items: center;
+  padding-left:8%;
+  padding-right:8%;
+
+}
+
+.description {
+  flex: 1;
+  text-align: left;
+  padding-right: 30%;
+}
+.description h1 {
+  font-size: 2.8rem;
+  color: #6effff;
+  margin-bottom: 15px;
+}
+
+.description p {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.profile img {
+  width: 400px; /* Adjust image width */
+  height: auto;
+  border-radius: 50%;
+}
+
+.glow {
+  filter: drop-shadow(0 0 10px #6effff); /* Add glow effect */
+}
+
+
+
+
+#home::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity and color as needed */
+  backdrop-filter: blur(10px); /* Add blur effect */
+  z-index: -1;
+}

@@ -2,54 +2,65 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Personal Portfolio</title>
+  <title>Portfolio</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css'>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav class="navbar">
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <section id="about" class="section">
-    <div class="about-container">
-      <div class="about-left">
-        <h3>Your Name</h3>
-        <ul class="social-links">
-          <li><a href="#">Facebook</a></li>
-          <li><a href="#">Twitter</a></li>
-          <li><a href="#">LinkedIn</a></li>
-        </ul>
+  <main id="main-doc">
+    <nav id="nav-bar">
+      <a href="#"><i class="fa-brands fa-github"></i></a>
+      <ul id="nav-ul">
+        <a href="#home"><li>Home</li></a>
+        <a href="#skills"><li>Skills</li></a>
+        <a href="#projects"><li>Projects</li></a>
+        <a href="#contact"><li>Contact</li></a>
+    
+      </ul>
+    </nav>
+<section id="home" class="profile_section">
+  <div class="profile_content">
+    <div class="profile-container">
+      <div class="description">
+        <h1 id="profile-name">Yvan Thrimawithana</h1>
+        <p>Welcome to my corner of the web! I'm Yvan Thrimawithana, currently pursuing a degree in Computer Security at NSBM, affiliated with the University of Plymouth. </p>
       </div>
-      <div class="about-middle">
-        <img src="pfp.jpg" alt="Your Name">
-      </div>
-      <div class="about-right">
-        <p>I'm a passionate developer and cybersecurity enthusiast, dedicated to learning and mastering new technologies. With a strong background in coding and a keen interest in cybersecurity, I strive to contribute to a safer digital world.</p>
+      <div class="profile">
+        <img src="assets/pfp.png" alt="Your Name" class="glow">
       </div>
     </div>
-  </section>
-  
+  </div>
+</section>
 
-  <section id="projects" class="section">
-    <h2>Projects</h2>
-    <p>Add your projects here...</p>
-  </section>
+    
+    
+    
+    <section id="skills" class="section">
+      <div class="content">
+        <h2>About Me</h2>
+        <p>My name is Yvan Thrimawithana and I am a NSBM Undergrad following a degree in Computer Security (affiliated with the university of Plymout) . With a strong background in web development, I have a deep understanding of technologies such as C#, JSP, and Servlet. I am also well-versed in mobile app development using Flutter and Firebase engineering.
 
-  <section id="skills" class="section">
-    <h2>Skills</h2>
-    <p>Add your skills here...</p>
-  </section>
-
-  <section id="contact" class="section">
-    <h2>Contact</h2>
-    <p>Add your contact information here...</p>
-  </section>
-
+          In addition to my technical skills, I have experience working with IoT sensors and have successfully developed a prototype for a smart traffic management system. My education at Lyceum, where I completed my Ordinary Level and Advanced Level examinations, has provided me with a solid foundation to excel in my career.
+          
+          I am always eager to learn new things and constantly strive to acquire new skills. My passion for technology and drive to stay updated with the latest advancements in the industry has helped me stay at the forefront of my field. 
+          
+          Aside from my professional endeavors, I am a team player with excellent communication skills. I believe in the power of collaboration and have a proven track record of delivering successful projects in a team environment. To maintain a healthy work-life balance, I prioritize my physical well-being by playing badminton and hitting the gym</p>
+      </div>
+    </section>
+    <section id="projects" class="section">
+      <div class="content">
+        <h2>Projects</h2>
+        <p>This is the projects section.</p>
+      </div>
+    </section>
+    <section id="contact" class="section">
+      <div class="content">
+        <h2>Contact</h2>
+        <p>This is the contact section.</p>
+      </div>
+    </section>
+  </main>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js'></script>
+  <script src="script.js"></script>
 </body>
 </html>
