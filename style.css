@@ -152,16 +152,15 @@ html, body {
 .profile_content {
 
   color: #fff;
+
 }
 .profile-container {
   display: flex;
   justify-content: space-between; /* Spread items evenly across the container */
   align-items: center;
   padding-left:8%;
-  padding-right:8%;
-  padding-top: 1%;
-  padding-bottom: 2%;
-
+  padding-right:4%;
+  padding-bottom: 5%;
 }
 
 .description {
@@ -172,7 +171,8 @@ html, body {
 .description h1 {
   font-size: 2.8rem;
   color: #6effff;
-  margin-bottom: 15px;
+  margin-bottom: 8%;
+  margin-top: 15%;
   font-family: 'Arvo', serif;
 }
 
@@ -184,13 +184,14 @@ html, body {
 }
 
 .profile img {
-  width: 300px; /* Adjust image width */
+  width: 500px; /* Adjust image width */
   height: auto;
   border-radius: 50%;
+ 
 }
 
 .glow {
-  filter: drop-shadow(0 0 10px #6effff); /* Add glow effect */
+  filter: drop-shadow(0 0 10px #dfa507); /* Add glow effect */
 }
 
 .social-icon {
@@ -208,46 +209,63 @@ html, body {
   padding-right: 20px;
 }
 
-/* Skills styles */
-.skills {
+.container {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
 }
 
-.skill {
-  display: flex;
-  align-items: center;
+.about-me {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.divider {
+  border-right: 2px solid #ccc;
+  height: 100%;
+  margin: 0 20px;
+}
+
+.skills {
+  flex: 1;
+}
+
+/* Styles for progress bars */
+.progress-bar {
+  width: 200px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
   margin-bottom: 10px;
 }
 
-.progress-bar {
-  width: 200px;
+.progress-fill {
   height: 20px;
-  background-color: #f0f0f0;
-  border-radius: 10px;
-  position: relative;
-  margin-left: 20%;
-  overflow: hidden; /* Ensure the progress bar doesn't overflow */
-  
+  border-radius: 5px;
+  background-color: #4CAF50;
 }
 
-.progress-bar .progress {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  background-color: #4CAF50; /* Green color */
-  border-radius: 10px;
+table {
+  width: 100%;
 }
 
-.skill p {
-  margin: 0;
-  padding-right: 10px;
+table td {
+  text-align: left;
+  padding: 10px 10px 10px 40px;
+  color: white;
+
 }
+.badge-container {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding: 2%;
+}
+.badge{
+  padding: 1%;
 
-
-
-
+}
 
 
 
@@ -259,4 +277,41 @@ html, body {
   background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity and color as needed */
   backdrop-filter: blur(10px); /* Add blur effect */
   z-index: -1;
+}
+
+@media only screen and (max-width: 768px) {
+  /* Adjust the padding of the main content */
+  #main-doc {
+    padding-top: 120px; /* Increase padding to give space for the fixed navbar */
+  }
+
+  /* Reduce font size for smaller screens */
+  .description h1 {
+    font-size: 2rem; /* Decrease font size */
+    margin-top: 10%; /* Adjust margin */
+    margin-bottom: 5%; /* Adjust margin */
+  }
+
+  .description p {
+    font-size: 1rem; /* Decrease font size */
+  }
+
+  .profile img {
+    width: 200px; /* Decrease image width */
+  }
+
+  /* Adjust padding and font size for skills section */
+  .container {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items */
+  }
+
+  .divider {
+    display: none; /* Hide the divider on smaller screens */
+  }
+
+  table td {
+    padding: 20px 10px; /* Adjust padding */
+    font-size: 0.9rem; /* Decrease font size */
+  }
 }

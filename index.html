@@ -18,12 +18,12 @@
     
       </ul>
     </nav>
-<section id="home" class="profile_section">
-  <div class="profile_content">
-    <div class="profile-container">
-      <div class="description">
-        <h1 id="profile-name">Yvan Thrimawithana</h1>
-        <p>Welcome to my corner of the web! I'm Yvan Thrimawithana, currently pursuing a degree in Computer Security at NSBM, affiliated with the University of Plymouth. </p>
+    <section id="home" class="profile_section">
+      <div class="profile_content">
+        <div class="profile-container">
+          <div class="description">
+            <h1 id="profile-name"></h1> <!-- Removed static text -->
+            <p id="about-me"></p> <!-- Added an ID for the "About Me" content -->
         <div class="social-icons">
           <a href="https://instagram.com/yvan_thrima" target="_blank"><img src="https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white" alt="Instagram" class="social-icon"></a>
           <a href="https://www.linkedin.com/in/yvan-thrimawithana-184b41249" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white" alt="LinkedIn" class="social-icon"></a>
@@ -35,7 +35,7 @@
       </div>
       
       <div class="profile">
-        <img src="assets/pfp.png" alt="Your Name" class="glow">
+        <img src="" alt="Your Name" class="glow" id="profile-picture"> <!-- Added an ID for the profile picture -->
       </div>
     </div>
   </div>
@@ -45,42 +45,124 @@
     
     
 <section id="skills" class="section">
-  <div class="content">
-    <div class="about-me">
-      <h2>About Me</h2>
-      <p>My name is Yvan Thrimawithana and I am a NSBM Undergrad following a degree in Computer Security (affiliated with the university of Plymouth) . With a strong background in web development, I have a deep understanding of technologies such as C#, JSP, and Servlet. I am also well-versed in mobile app development using Flutter and Firebase engineering.</p>
-      <p>In addition to my technical skills, I have experience working with IoT sensors and have successfully developed a prototype for a smart traffic management system. My education at Lyceum, where I completed my Ordinary Level and Advanced Level examinations, has provided me with a solid foundation to excel in my career.</p>
-      <p>I am always eager to learn new things and constantly strive to acquire new skills. My passion for technology and drive to stay updated with the latest advancements in the industry has helped me stay at the forefront of my field. Aside from my professional endeavors, I am a team player with excellent communication skills. I believe in the power of collaboration and have a proven track record of delivering successful projects in a team environment. To maintain a healthy work-life balance, I prioritize my physical well-being by playing badminton and hitting the gym</p>
-    </div>
+  <div class="container">
+ <div class="about-me">
+  <h2>About Me</h2>
+  <p>Hi there! I'm Yvan Thrimawithana, a Computer Security undergraduate student at NSBM, affiliated with the University of Plymouth.</p>
+  
+  <h3>My Background</h3>
+  <p>I have a passion for technology, particularly in web development and mobile app development using technologies like C#, JSP, Servlet, Flutter, and Firebase.</p>
+  
+  <h3>Experience</h3>
+  <p>I've had the opportunity to work with IoT sensors and even developed a prototype for a smart traffic management system.</p>
+  
+  <h3>Education</h3>
+  <p>My education at Lyceum laid a solid foundation, and I've continued to build upon it, completing my Ordinary Level and Advanced Level examinations.</p>
+  
+  <h3>Continuous Learning</h3>
+  <p>I'm always eager to learn and stay updated with the latest advancements in the industry. I believe in the power of continuous learning to stay at the forefront of my field.</p>
+  
+  <h3>Team Player</h3>
+  <p>I value collaboration and have a proven track record of delivering successful projects in a team environment. Communication is key, and I strive to excel in it.</p>
+  
+  <h3>Work-Life Balance</h3>
+  <p>Outside of work and studies, I prioritize my physical well-being by playing badminton and hitting the gym. A healthy work-life balance is essential for sustained productivity and happiness.</p>
+</div>
+
+    <div class="divider"></div>
     <div class="skills">
-      <div class="skill">
-        <p>C#</p>
-        <div class="progress-bar" data-percent="90"><span class="progress"></span></div>
+      <h2>Top Skills</h2>
+      <table>
+        <tr>
+          <td>Mobile App Dev</td>
+          <td>
+            <div class="progress-bar">
+              <div class="progress-fill" id="cSharpProgress"></div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>IOT</td>
+          <td>
+            <div class="progress-bar">
+              <div class="progress-fill" id="jspProgress"></div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Java based Web dev </td>
+          <td>
+            <div class="progress-bar">
+              <div class="progress-fill" id="servletProgress"></div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Query engineering</td>
+          <td>
+            <div class="progress-bar">
+              <div class="progress-fill" id="flutterProgress"></div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>Web development</td>
+          <td>
+            <div class="progress-bar">
+              <div class="progress-fill" id="firebaseProgress"></div>
+            </div>
+          </td>
+        </tr>
+      </table>
+      <div class="badge-container">
+        <img class="badge" src="https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white" alt="C">
+        <img class="badge" src="https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=csharp&logoColor=white" alt="C#">
+        <img class="badge" src="https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white" alt="C++">
+        <img class="badge" src="https://img.shields.io/badge/dart-%230175C2.svg?style=for-the-badge&logo=dart&logoColor=white" alt="Dart">
+        <img class="badge" src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3">
+        <img class="badge" src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5">
+        <img class="badge" src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java">
+        <img class="badge" src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" alt="JavaScript">
+        <img class="badge" src="https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white" alt="PHP">
+        <img class="badge" src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" alt="Python">
+        <img class="badge" src="https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase" alt="Firebase">
+        <img class="badge" src="https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white" alt="Google Cloud">
+        <img class="badge" src="https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=#00C7B7" alt="Netlify">
+        <img class="badge" src="https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap">
+        <img class="badge" src="https://img.shields.io/badge/chart.js-F5788D.svg?style=for-the-badge&logo=chart.js&logoColor=white" alt="Chart.js">
+        <img class="badge" src="https://img.shields.io/badge/Flutter-%2302569B.svg?style=for-the-badge&logo=Flutter&logoColor=white" alt="Flutter">
+        <img class="badge" src="https://img.shields.io/badge/opencv-%23white.svg?style=for-the-badge&logo=opencv&logoColor=white" alt="OpenCV">
+        <img class="badge" src="https://img.shields.io/badge/Firebase-039BE5?style=for-the-badge&logo=Firebase&logoColor=white" alt="Firebase">
+        <img class="badge" src="https://img.shields.io/badge/mysql-%2300000f.svg?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL">
+        <img class="badge" src="https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite">
+        <img class="badge" src="https://img.shields.io/badge/adobe-%23FF0000.svg?style=for-the-badge&logo=adobe&logoColor=white" alt="Adobe">
+        <img class="badge" src="https://img.shields.io/badge/Adobe%20Acrobat%20Reader-EC1C24.svg?style=for-the-badge&logo=Adobe%20Acrobat%20Reader&logoColor=white" alt="Adobe Acrobat Reader">
+        <img class="badge" src="https://img.shields.io/badge/Adobe%20Dreamweaver-FF61F6.svg?style=for-the-badge&logo=Adobe%20Dreamweaver&logoColor=white" alt="Adobe Dreamweaver">
+        <img class="badge" src="https://img.shields.io/badge/Adobe%20Lightroom-31A8FF.svg?style=for-the-badge&logo=Adobe%20Lightroom&logoColor=white" alt="Adobe Lightroom">
+        <img class="badge" src="https://img.shields.io/badge/Adobe%20Lightroom%20Classic-31A8FF.svg?style=for-the-badge&logo=Adobe%20Lightroom%20Classic&logoColor=white" alt="Adobe Lightroom Classic">
+        <img class="badge" src="https://img.shields.io/badge/adobe%20photoshop-%2331A8FF.svg?style=for-the-badge&logo=adobe%20photoshop&logoColor=white" alt="Adobe Photoshop">
+        <img class="badge" src="https://img.shields.io/badge/Canva-%2300C4CC.svg?style=for-the-badge&logo=Canva&logoColor=white" alt="Canva">
+        <img class="badge" src="https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white" alt="Figma">
+        <img class="badge" src="https://img.shields.io/badge/Gimp-657D8B?style=for-the-badge&logo=gimp&logoColor=FFFFFF" alt="Gimp">
+        <img class="badge" src="https://img.shields.io/badge/Keras-%23D00000.svg?style=for-the-badge&logo=Keras&logoColor=white" alt="Keras">
+        <img class="badge" src="https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black" alt="Matplotlib">
+        <img class="badge" src="https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white" alt="NumPy">
+        <img class="badge" src="https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white" alt="PyTorch">
+        <img class="badge" src="https://img.shields.io/badge/SciPy-%230C55A5.svg?style=for-the-badge&logo=scipy&logoColor=%white" alt="SciPy">
+        <img class="badge" src="https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white" alt="TensorFlow">
+        <img class="badge" src="https://img.shields.io/badge/-Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white" alt="Arduino">
+        <img class="badge" src="https://img.shields.io/badge/cisco-%23049fd9.svg?style=for-the-badge&logo=cisco&logoColor=black" alt="Cisco">
+        <img class="badge" src="https://img.shields.io/badge/Gradle-02303A.svg?style=for-the-badge&logo=Gradle&logoColor=white" alt="Gradle">
+        <img class="badge" src="https://img.shields.io/badge/mosquitto-%233C5280.svg?style=for-the-badge&logo=eclipsemosquitto&logoColor=white" alt="Mosquitto">
+        <img class="badge" src="https://img.shields.io/badge/Notion-%23000000.svg?style=for-the-badge&logo=notion&logoColor=white" alt="Notion">
+        <img class="badge" src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white" alt="Postman">
+        <img class="badge" src="https://img.shields.io/badge/tor-%237E4798.svg?style=for-the-badge&logo=tor-project&logoColor=white" alt="TOR">
       </div>
-      <div class="skill">
-        <p>JSP</p>
-        <div class="progress-bar" data-percent="20"><span class="progress"></span></div>
-      </div>
-      <div class="skill">
-        <p>Servlet</p>
-        <div class="progress-bar" data-percent="85"><span class="progress"></span></div>
-      </div>
-      <div class="skill">
-        <p>Mobile App Dev</p>
-        <div class="progress-bar" data-percent="85"><span class="progress"></span></div>
-      </div>
-      <div class="skill">
-        <p>MYSQL</p>
-        <div class="progress-bar" data-percent="85"><span class="progress"></span></div>
-      </div>
-      <div class="skill">
-        <p>Arduino</p>
-        <div class="progress-bar" data-percent="85"><span class="progress"></span></div>
-      </div>
-      <!-- Add more skills here -->
+      
     </div>
   </div>
 </section>
+
 
     
     <section id="projects" class="section">
@@ -97,6 +179,11 @@
     </section>
   </main>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js'></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+
   <script src="script.js"></script>
 </body>
 </html>

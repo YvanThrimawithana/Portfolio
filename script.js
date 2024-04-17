@@ -1,3 +1,4 @@
+
 $(document).ready(function(){
     $("#nav-ul a").on('click', function(event) {
       if (this.hash !== "") {
@@ -20,7 +21,7 @@ function typeWriter(element, text, i) {
       i++;
       setTimeout(function() {
         typeWriter(element, text, i);
-      }, 120); // Adjust typing speed (milliseconds)
+      }, 50); // Adjust typing speed (milliseconds)
     }
   }
   
@@ -31,21 +32,59 @@ function typeWriter(element, text, i) {
     profileName.innerHTML = ""; // Clear the text content of the h1 tag
     typeWriter(profileName, text, 0);
   });
+    function updateProgress(skill, progress) {
+      document.getElementById(skill + 'Progress').style.width = progress + '%';
+    }
 
-  document.addEventListener("DOMContentLoaded", function() {
-    // Get all progress bars
-    const progressBars = document.querySelectorAll(".progress-bar");
-  
-    // Loop through each progress bar
-    progressBars.forEach(function(progressBar) {
-      // Get the progress percentage from data-percent attribute
-      const percent = parseInt(progressBar.dataset.percent);
-  
-      // Get the progress element inside the progress bar
-      const progress = progressBar.querySelector(".progress");
-  
-      // Set the width of the progress element based on the percentage
-      progress.style.width = percent + "%";
-    });
+    // Example: Update progress bars dynamically
+    updateProgress('cSharp', 80);
+    updateProgress('jsp', 70);
+    updateProgress('servlet', 75);
+    updateProgress('flutter', 60);
+    updateProgress('firebase', 65);
+
+
+
+// Your Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyD5ZMgbSFo7_TkmkKCuW7eksqe2RvAVdFI",
+  authDomain: "portfolio-64506.firebaseapp.com",
+  projectId: "portfolio-64506",
+  storageBucket: "portfolio-64506.appspot.com",
+  messagingSenderId: "788465558076",
+  appId: "1:788465558076:web:7eb1f5bea7538451b09939"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
+// Now you can use Firebase services, e.g., database
+var firestore = firebase.firestore();
+// Function to retrieve data from Firebase and update HTML elements
+function updateProfileFromFirebase() {
+  var profileDocRef = firestore.collection('portfolio').doc('about');
+
+  profileDocRef.get().then(function(doc) {
+    if (doc.exists) {
+      var profileData = doc.data();
+
+      // Update the profile name
+      
+
+      // Update the "About Me" content
+      document.getElementById('about-me').textContent = profileData.about;
+
+      // Update the profile picture URL
+      document.getElementById('profile-picture').src = profileData.profilePicture;
+
+      // Call the typeWriter function after updating the profile name
+      typeWriter(document.getElementById('profile-name'), profileData.name, 0);
+    } else {
+      console.log("No such document!");
+    }
+  }).catch(function(error) {
+    console.log("Error getting document:", error);
   });
-  
+}
+
+// Call the function to update the profile from Firebase
+updateProfileFromFirebase();
